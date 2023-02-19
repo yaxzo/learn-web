@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     title = "web"
-    lot = [("Lada", "крутая тачка", "10.000"), ("Mercedes", "машина премиум класса", "5.000.000"),
+    lot = [("Lada", "крутая тачка для внатуре чётких типов", "40.000"), ("Mercedes", "машина премиум класса", "5.000.000"),
            ("Renault Logan", "средняя ценовая категория", "1.000.000")]
 
     return render_template("index.html", title=title, lot=lot)
@@ -30,7 +30,7 @@ def base_index():
 
 @app.route("/extend_base")
 def extend_base():
-    lot = [("Lada", "крутая тачка", "10.000"), ("Mercedes", "машина премуим классх", "5.000.000"),
+    lot = [("Lada", "крутая тачка для внатуре чётких типов", "40.000"), ("Mercedes", "машина премуим классх", "5.000.000"),
            ("Renault Logan", "средняя ценовая категория", "1.000.000")]
     return render_template("extend_base_index.html", lst=lot)
 
