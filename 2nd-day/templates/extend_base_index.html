@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<style>
+    .block {
+        height: 100px;
+        width: 100px;
+        margin: 30px;
+        display: inline-block;
+    }
+</style>
+<body>
+      {% extends "base_index.html" %}
+
+      {% block content %}
+          <hr>
+          {% for header_title, subtitle, text in lst %}
+              <div class="block">
+                  <h1>{{ header_title }}</h1>
+                  <p>{{ subtitle }}</p>
+                  <p>{{ text }}</p>
+                  <hr>
+              </div>
+          {% endfor %}
+      {% endblock %}
+
+</body>
+</html>
