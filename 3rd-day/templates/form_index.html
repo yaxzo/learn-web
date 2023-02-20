@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+</head>
+<style>
+    .flash {
+        padding: 10px;
+    }
+
+    .flash.success {
+        background-color: green;
+    }
+
+    .flash.error {
+        background-color: red;
+    }
+</style>
+<body>
+    {% extends "base_index.html" %}
+
+    {% block content %}
+        {% for category, msg in get_flashed_messages(True) %}
+            <h5 class="flash {{ category }}">{{ msg }}</h5>
+        {% endfor %}
+        <form method="post">
+            <input name="username" type="text" placeholder="Имя пользователя">
+            <input type="submit" value="Отправить">
+        </form>
+    {% endblock %}
+</body>
+</html>

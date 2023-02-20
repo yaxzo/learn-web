@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block content %}
+        {% for header, text, price in lot%}
+            <h1>{{ header }}</h1>
+            <p> {{ text }}</p>
+            <p> {{ price }}</p>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
